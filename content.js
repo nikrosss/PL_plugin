@@ -3,6 +3,8 @@
 (function() {
   'use strict';
 
+  if (/viewtopic\.php/i.test(window.location.href)) return;
+
   // Extract topic ID from viewtopic.php URL
   function getTopicId(url) {
     try {
