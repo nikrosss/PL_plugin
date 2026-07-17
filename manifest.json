@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Forum Image Collector",
+  "description": "Displays images inline from forum topics on pornolab.net",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://pornolab.net/*",
+    "https://*.pornolab.net/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pornolab.net/forum/*",
+        "https://*.pornolab.net/forum/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

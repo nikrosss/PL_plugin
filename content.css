@@ -1,0 +1,38 @@
+/* Forum Image Collector - Inline Styles */
+
+.fic-topic-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px 0;
+  margin: 4px 0;
+  border-top: 1px dashed #ccc;
+}
+
+.fic-thumb {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.fic-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.fic-thumb:hover img {
+  transform: scale(1.1);
+}
+
+.fic-loading {
+  font-size: 11px;
+  color: #999;
+  padding: 4px 0;
+  font-style: italic;
+}
