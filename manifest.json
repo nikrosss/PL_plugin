@@ -30,6 +30,9 @@
         "https://pornolab.net/forum/*",
         "https://*.pornolab.net/forum/*"
       ],
+      "exclude_globs": [
+        "*viewtopic*"
+      ],
       "js": ["content.js"],
       "css": ["content.css"],
       "run_at": "document_idle"
