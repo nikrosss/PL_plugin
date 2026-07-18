@@ -31,7 +31,8 @@
         "https://*.pornolab.net/forum/*"
       ],
       "exclude_globs": [
-        "*viewtopic*"
+        "*viewtopic*",
+        "*forum/index.php*"
       ],
       "js": ["content.js"],
       "css": ["content.css"],
